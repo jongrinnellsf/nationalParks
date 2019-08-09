@@ -66,3 +66,11 @@ function watchForm() {
 }
 
 $(watchForm);
+
+//remove spaces for mutli-state support
+$(function() {
+    $('#js-search-term').on('keypress', function(e) {
+        if (e.which == 32)
+            return false;
+    });
+});
